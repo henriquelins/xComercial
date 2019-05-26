@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.6.0.final using JasperReports Library version 6.6.0  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="relatorioLancamento" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7a7c983e-c265-4daf-9e89-2c68c6b1f7e6">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="One Empty Record"/>
+	<import value="br.com.ne.comercial.controller.*"/>
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dataDoLancamento" class="java.util.Date">
+		<fieldDescription><![CDATA[dataDoLancamento]]></fieldDescription>
+	</field>
+	<field name="saldoAnterior" class="java.lang.Integer">
+		<fieldDescription><![CDATA[saldoAnterior]]></fieldDescription>
+	</field>
+	<field name="quantidadeDoPedido" class="java.lang.Integer">
+		<fieldDescription><![CDATA[quantidadeDoPedido]]></fieldDescription>
+	</field>
+	<field name="saldoAtual" class="java.lang.Integer">
+		<fieldDescription><![CDATA[saldoAtual]]></fieldDescription>
+	</field>
+	<field name="observacoesLancamento" class="java.lang.String">
+		<fieldDescription><![CDATA[observacoesLancamento]]></fieldDescription>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="50" splitType="Stretch">
+			<staticText>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="50" forecolor="#FFFFFF" backcolor="#0F4AFC" uuid="5220e0d6-de76-45ce-ade7-c0a29a53d54d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI Semibold" size="26" isItalic="true"/>
+				</textElement>
+				<text><![CDATA[Relatório de Lançamento]]></text>
+			</staticText>
+		</band>
+	</title>
+	<pageHeader>
+		<band splitType="Stretch"/>
+	</pageHeader>
+	<columnHeader>
+		<band height="22" splitType="Stretch">
+			<frame>
+				<reportElement mode="Opaque" x="0" y="0" width="555" height="22" backcolor="#1B8BF5" uuid="f9ab1287-de11-4f63-9c09-d558622f7969"/>
+				<staticText>
+					<reportElement x="0" y="0" width="80" height="22" forecolor="#FFFFFF" uuid="f380a433-31e8-44e8-ab7e-9230c8ff4de9"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Segoe UI Semibold" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Lançamento]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="90" y="0" width="80" height="22" forecolor="#FFFFFF" uuid="cfe301f8-3a9c-46c6-8b70-f2fc1124966a"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Segoe UI Semibold" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Saldo Anterior]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="180" y="0" width="80" height="22" forecolor="#FFFFFF" uuid="9b1aa100-35c6-4e19-969b-a97a78686c91"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Segoe UI Semibold" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Quantidade]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="270" y="0" width="80" height="22" forecolor="#FFFFFF" uuid="35b3b496-180a-460a-8a68-85831c8549db"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Segoe UI Semibold" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Saldo Atual]]></text>
+				</staticText>
+				<staticText>
+					<reportElement x="360" y="0" width="195" height="22" forecolor="#FFFFFF" uuid="04916208-61bf-4fa5-b5fa-6494d11a7342"/>
+					<textElement textAlignment="Center" verticalAlignment="Middle">
+						<font fontName="Segoe UI Semibold" isItalic="true"/>
+					</textElement>
+					<text><![CDATA[Detalhamento]]></text>
+				</staticText>
+			</frame>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21">
+			<rectangle>
+				<reportElement x="0" y="0" width="555" height="20" uuid="81def8de-35a7-4242-9dc0-a5479bc2074b"/>
+				<graphicElement>
+					<pen lineColor="#468BF2"/>
+				</graphicElement>
+			</rectangle>
+			<textField pattern="dd/MM/yyyy">
+				<reportElement x="0" y="0" width="80" height="20" uuid="5f8d9221-a996-4bca-aa61-b630491dd72d"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI Semibold" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{dataDoLancamento}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="90" y="0" width="80" height="20" uuid="1f36150d-97e2-424d-9d2e-e3838ed2474b"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI Semibold" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saldoAnterior}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="180" y="0" width="80" height="20" uuid="d40ff311-94b0-4d4b-80c6-37b215c6ff16"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI Semibold" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{quantidadeDoPedido}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="270" y="0" width="80" height="20" uuid="400eb344-e488-4a10-8aa8-99fdb869cd2a"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI Semibold" size="8"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{saldoAtual}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="360" y="0" width="195" height="20" uuid="d0e104f2-47fd-4154-8bc7-d6401990d903"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font fontName="Segoe UI Semibold" size="6"/>
+				</textElement>
+				<textFieldExpression><![CDATA[$F{observacoesLancamento}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="24" width="100" height="30" uuid="d7290032-8106-44a8-b28f-bab8031f7bad"/>
+				<textElement textAlignment="Right" verticalAlignment="Middle">
+					<font size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression><![CDATA["Pág. "+ $V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>
