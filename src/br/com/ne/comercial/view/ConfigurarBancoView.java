@@ -19,7 +19,7 @@ import javax.swing.JTextField;
 import javax.swing.SwingConstants;
 import javax.swing.border.LineBorder;
 
-import br.com.ne.comercial.controller.AbrirComercial;
+import br.com.ne.comercial.controller.AbrirAplicativoComercial;
 import br.com.ne.comercial.controller.LerBancoDados;
 
 public class ConfigurarBancoView extends JDialog {
@@ -158,7 +158,7 @@ public class ConfigurarBancoView extends JDialog {
 
 					dispose();
 
-					AbrirComercial iniciarAplicativo = new AbrirComercial();
+					AbrirAplicativoComercial iniciarAplicativo = new AbrirAplicativoComercial();
 					iniciarAplicativo.Iniciar();
 
 				}
@@ -202,7 +202,7 @@ public class ConfigurarBancoView extends JDialog {
 
 					dispose();
 
-					AbrirComercial iniciarAplicativo = new AbrirComercial();
+					AbrirAplicativoComercial iniciarAplicativo = new AbrirAplicativoComercial();
 					iniciarAplicativo.Iniciar();
 
 				}

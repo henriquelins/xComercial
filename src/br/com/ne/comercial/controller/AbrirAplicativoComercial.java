@@ -9,7 +9,7 @@ import javax.swing.UnsupportedLookAndFeelException;
 import br.com.ne.comercial.model.ConectarBanco;
 import br.com.ne.comercial.view.LoginComercialView;
 
-public class AbrirComercial {
+public class AbrirAplicativoComercial {
 
 	// criação de ServerSocket para não permitir uma nova instância do programa
 	private static ServerSocket s;
@@ -28,7 +28,7 @@ public class AbrirComercial {
 
 			if (sucesso) {
 
-				AbrirComercial iniaciarAplicativo = new AbrirComercial();
+				AbrirAplicativoComercial iniaciarAplicativo = new AbrirAplicativoComercial();
 				iniaciarAplicativo.Iniciar();
 
 			} else {
@@ -36,7 +36,7 @@ public class AbrirComercial {
 				JOptionPane.showMessageDialog(null, "Erro ao abrir o banco de dados!", "Abrir Programa",
 						JOptionPane.ERROR_MESSAGE);
 
-				AbrirComercial iniaciarAplicativo = new AbrirComercial();
+				AbrirAplicativoComercial iniaciarAplicativo = new AbrirAplicativoComercial();
 				iniaciarAplicativo.Iniciar();
 
 			}
@@ -74,7 +74,7 @@ public class AbrirComercial {
 
 	public static void setS(ServerSocket s) {
 
-		AbrirComercial.s = s;
+		AbrirAplicativoComercial.s = s;
 
 	}
 
